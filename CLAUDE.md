@@ -14,8 +14,25 @@ The full approved design (data model, algorithms, roadmap, risks) is in [docs/DE
 ## Current status
 
 - **eBay API keys: not yet available** (Developer Program signup is pending). Everything runs on synthetic fixtures until Phase 4.
-- Phase 1 (offline skeleton + claim consistency checks): **in progress**
-- Phases 2–5: not started (see docs/DESIGN.md §5)
+- **Phase 1 (offline skeleton + claim consistency checks): done.** `listinglens analyze <fixture> --offline` prints a Markdown report. 10 synthetic fixtures live in `tests/fixtures/ebay/items/`.
+- **Phase 2 (heuristic signals + trust score): next.** `restrictive_returns` and `low_feedback_high_value` fixtures already exist for it.
+- Phases 3–5: not started (see docs/DESIGN.md §5)
+
+Decisions made during Phase 1 (they differ from or narrow docs/DESIGN.md):
+- `Shipping.handling_days_max` was removed. It isn't confirmed that the Browse API returns it. Re-add in Phase 4 only if a live response has it.
+- The brand rule compares only the `brand` field with the `Brand` item specific. Brand names inside the title need a brand list, so that's deferred.
+- Report is Markdown only. JSON output is deferred until something needs it.
+- Only the dependencies in use are installed: `beautifulsoup4` (+ pytest/ruff). Add `httpx` and `rapidfuzz` in the phase that needs them.
+- Condition comes from eBay's numeric `conditionId` (stable), mapped to NEW / NEW_OTHER / REFURBISHED / USED / FOR_PARTS in `ebay/parse.py`.
+- "New" claims only conflict with USED/FOR_PARTS, not REFURBISHED, because refurbished items can be sealed.
+
+## Code map
+
+- `models.py`: dataclasses. `Listing.field_paths` maps our field names to source paths so evidence cites the real eBay field.
+- `ebay/parse.py`: the only code that knows eBay's JSON. Missing input becomes `None`, never a default.
+- `checks/consistency.py`: one pure function per rule, registered in `RULES`. Adding a rule means a function, a `RULES` entry, a fixture, and an `EXPECTED` entry in `tests/test_consistency.py`.
+- `report.py`: all untrusted text goes through `md_escape`.
+- `sources.py`: the `Source` Protocol, with `FixtureSource` now and the live client in Phase 4.
 
 ## Who you're working with
 
@@ -73,7 +90,7 @@ tests/
 
 - Python **3.13** (installed locally); code should also run on 3.11+.
 - Use a virtual environment in `.venv`, with dependencies declared in `pyproject.toml`. Keep dependencies few. Add one only when it clearly earns its place, and say why.
-- Suggested baseline: `httpx` (HTTP), `python-dotenv` (config), `pytest` (tests), `ruff` (lint + format). Confirm with the owner before adding anything heavier (pydantic, LLM SDKs, databases, web frameworks).
+- Planned baseline: `beautifulsoup4` (in use), `httpx` and `python-dotenv` (Phase 4), `rapidfuzz` (Phase 3), `pytest` and `ruff` (dev, in use). Confirm with the owner before adding anything heavier (pydantic, LLM SDKs, databases, web frameworks).
 - Type hints on public functions. Follow `ruff` defaults with a line length of 100.
 - The dev machine is **Windows** (PowerShell). Give commands that work there, e.g. `.venv\Scripts\Activate.ps1`.
 
@@ -82,6 +99,7 @@ python -m venv .venv; .venv\Scripts\Activate.ps1
 pip install -e ".[dev]"
 pytest
 ruff check . ; ruff format .
+listinglens analyze capacity_mismatch --offline   # run on a fixture (from the repo root)
 ```
 
 ## Testing
