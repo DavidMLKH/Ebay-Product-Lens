@@ -1,0 +1,67 @@
+{
+  "itemId": "v1|100000000010|0",
+  "legacyItemId": "100000000010",
+  "title": "Apple MacBook Pro 14 M3 Pro 1TB Space Black",
+  "itemWebUrl": "https://www.ebay.com/itm/100000000010",
+  "price": {
+    "value": "1199.00",
+    "currency": "USD"
+  },
+  "condition": "Used",
+  "conditionId": "3000",
+  "description": "<p>MacBook Pro 14 inch, M3 Pro, 1TB SSD. Works perfectly.</p>",
+  "brand": "Apple",
+  "mpn": "MRX43LL/A",
+  "categoryPath": "Cell Phones & Accessories|Cell Phones & Smartphones",
+  "localizedAspects": [
+    {
+      "type": "STRING",
+      "name": "Brand",
+      "value": "Apple"
+    },
+    {
+      "type": "STRING",
+      "name": "Model",
+      "value": "MacBook Pro"
+    },
+    {
+      "type": "STRING",
+      "name": "SSD Capacity",
+      "value": "1 TB"
+    }
+  ],
+  "seller": {
+    "username": "fixture_seller_new",
+    "feedbackPercentage": "100.0",
+    "feedbackScore": 3,
+    "sellerAccountType": "INDIVIDUAL"
+  },
+  "shippingOptions": [
+    {
+      "shippingCost": {
+        "value": "0.00",
+        "currency": "USD"
+      },
+      "type": "Standard"
+    }
+  ],
+  "itemLocation": {
+    "country": "US"
+  },
+  "returnTerms": {
+    "returnsAccepted": true,
+    "returnPeriod": {
+      "value": 30,
+      "unit": "CALENDAR_DAY"
+    },
+    "returnShippingCostPayer": "SELLER"
+  },
+  "image": {
+    "imageUrl": "https://i.ebayimg.com/images/fixture/1.jpg"
+  },
+  "additionalImages": [
+    {
+      "imageUrl": "https://i.ebayimg.com/images/fixture/2.jpg"
+    }
+  ]
+}

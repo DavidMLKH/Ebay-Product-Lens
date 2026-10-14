@@ -1,0 +1,11 @@
+{
+  "itemId": "v1|100000000007|0",
+  "title": "Samsung Galaxy S23 Phantom Black",
+  "price": {
+    "value": "450.00",
+    "currency": "USD"
+  },
+  "seller": {
+    "username": "fixture_seller_sparse"
+  }
+}

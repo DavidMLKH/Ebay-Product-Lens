@@ -1,0 +1,68 @@
+{
+  "itemId": "v1|100000000008|0",
+  "legacyItemId": "100000000008",
+  "title": "Like New Samsung Galaxy S23 256GB Phantom Black Unlocked",
+  "itemWebUrl": "https://www.ebay.com/itm/100000000008",
+  "price": {
+    "value": "389.00",
+    "currency": "USD"
+  },
+  "condition": "Used - Like New",
+  "conditionId": "2750",
+  "conditionDescription": "Not new, but barely used for two weeks.",
+  "description": "<p>Like new condition. Not new in box, opened once.</p>",
+  "brand": "Samsung",
+  "mpn": "SM-S911UZKEXAA",
+  "categoryPath": "Cell Phones & Accessories|Cell Phones & Smartphones",
+  "localizedAspects": [
+    {
+      "type": "STRING",
+      "name": "Brand",
+      "value": "Samsung"
+    },
+    {
+      "type": "STRING",
+      "name": "Model",
+      "value": "Samsung Galaxy S23"
+    },
+    {
+      "type": "STRING",
+      "name": "Storage Capacity",
+      "value": "256 GB"
+    }
+  ],
+  "seller": {
+    "username": "fixture_seller_good",
+    "feedbackPercentage": "99.6",
+    "feedbackScore": 4210,
+    "sellerAccountType": "BUSINESS"
+  },
+  "shippingOptions": [
+    {
+      "shippingCost": {
+        "value": "0.00",
+        "currency": "USD"
+      },
+      "type": "Standard"
+    }
+  ],
+  "itemLocation": {
+    "country": "US"
+  },
+  "returnTerms": {
+    "returnsAccepted": true,
+    "returnPeriod": {
+      "value": 30,
+      "unit": "CALENDAR_DAY"
+    },
+    "returnShippingCostPayer": "SELLER"
+  },
+  "image": {
+    "imageUrl": "https://i.ebayimg.com/images/fixture/1.jpg"
+  },
+  "additionalImages": [
+    {
+      "imageUrl": "https://i.ebayimg.com/images/fixture/2.jpg"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "itemId": "v1|100000000001|0",
+  "legacyItemId": "100000000001",
+  "title": "Apple iPhone 13 128GB Midnight Unlocked - Good Condition",
+  "itemWebUrl": "https://www.ebay.com/itm/100000000001",
+  "price": {
+    "value": "389.00",
+    "currency": "USD"
+  },
+  "condition": "Used",
+  "conditionId": "3000",
+  "conditionDescription": "Light scratches on the back. Screen is perfect. Battery health 88%.",
+  "description": "<div><p>Apple iPhone 13, 128GB, Midnight. Fully working, unlocked for all carriers.</p><p>Includes charging cable. Ships within 1 business day.</p></div>",
+  "brand": "Apple",
+  "mpn": "MLMN3LL/A",
+  "gtin": "194252707326",
+  "epid": "11053451110",
+  "categoryPath": "Cell Phones & Accessories|Cell Phones & Smartphones",
+  "localizedAspects": [
+    {
+      "type": "STRING",
+      "name": "Brand",
+      "value": "Apple"
+    },
+    {
+      "type": "STRING",
+      "name": "Model",
+      "value": "iPhone 13"
+    },
+    {
+      "type": "STRING",
+      "name": "Storage Capacity",
+      "value": "128 GB"
+    },
+    {
+      "type": "STRING",
+      "name": "Color",
+      "value": "Midnight"
+    },
+    {
+      "type": "STRING",
+      "name": "Network",
+      "value": "Unlocked"
+    }
+  ],
+  "seller": {
+    "username": "fixture_seller_good",
+    "feedbackPercentage": "99.6",
+    "feedbackScore": 4210,
+    "sellerAccountType": "BUSINESS"
+  },
+  "shippingOptions": [
+    {
+      "shippingCost": {
+        "value": "0.00",
+        "currency": "USD"
+      },
+      "type": "Standard"
+    }
+  ],
+  "itemLocation": {
+    "country": "US"
+  },
+  "returnTerms": {
+    "returnsAccepted": true,
+    "returnPeriod": {
+      "value": 30,
+      "unit": "CALENDAR_DAY"
+    },
+    "returnShippingCostPayer": "SELLER"
+  },
+  "image": {
+    "imageUrl": "https://i.ebayimg.com/images/fixture/1.jpg"
+  },
+  "additionalImages": [
+    {
+      "imageUrl": "https://i.ebayimg.com/images/fixture/2.jpg"
+    }
+  ]
+}
