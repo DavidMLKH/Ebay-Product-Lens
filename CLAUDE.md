@@ -149,5 +149,6 @@ These guidelines reduce common LLM coding mistakes. They favor caution over spee
 ## Git
 
 - Small commits, one logical change each, with an imperative subject line ("Add title/condition mismatch check").
+- **No AI attribution in commits or PRs.** Don't add `Co-Authored-By: Claude` (or similar) trailers, or "Generated with Claude Code" lines. The owner is the sole author on GitHub.
 - Never commit `.env`, tokens, `.venv/`, or cached API responses containing real seller data.
 - `claude-usage/` is an unrelated cloned repo. Don't modify it and don't commit it as part of this project.
