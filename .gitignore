@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Virtual environment
+.venv/
+
+# Tool caches
+.pytest_cache/
+.ruff_cache/
+
+# Secrets: API keys live here, never commit
+.env
+
+# Cached eBay API responses (may contain real seller data)
+.cache/
+
+# Unrelated cloned repo that sits in this folder
+claude-usage/
